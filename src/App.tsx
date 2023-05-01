@@ -1,13 +1,12 @@
-import { Button } from "./components/SqButton";
+import { SqButton } from "./components/SqButton";
 
 function App() {
 
   return (
     <div className="App">
-      <Button 
+      <SqButton 
         label="Mon bouton" 
-        color='primary' 
-        size='medium' />
+        variant='orange' />
     </div>
   );
 }
