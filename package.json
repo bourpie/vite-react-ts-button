@@ -1,7 +1,7 @@
 {
   "name": "sq-composants",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -31,7 +31,8 @@
     "@tailwindcss/typography": "^0.5.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.2.4",
+    "storybook-i18n": "^2.0.6",
+    "tailwindcss": "^3.3.2",
     "tailwindcss-ripple": "^0.7.1"
   },
   "devDependencies": {
@@ -39,9 +40,11 @@
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
     "@storybook/blocks": "^7.0.7",
+    "@storybook/manager-api": "^7.0.7",
     "@storybook/react": "^7.0.7",
     "@storybook/react-vite": "^7.0.7",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@storybook/theming": "^7.0.7",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react-swc": "^3.0.0",

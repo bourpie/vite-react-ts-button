@@ -7,6 +7,7 @@ const meta = {
   title: 'Boutons',
   component: SqButton,
   tags: ['autodocs'],
+  argTypes: { onClick: { action: 'clicked' } },
 } satisfies Meta<typeof SqButton>;
 
 export default meta;
@@ -17,6 +18,7 @@ export const Orange: Story = {
   args: {
     variant: 'orange',
     label: 'Button',
+    onClick: () => alert("allo")
   },
 };
 

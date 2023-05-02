@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <SqButton 
+        href="#"
         label="Mon bouton" 
         variant='orange' />
     </div>

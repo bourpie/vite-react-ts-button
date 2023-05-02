@@ -12,7 +12,7 @@ interface ButtonProps {
   /**
    * Contenu du bouton
    */
-  label: string;
+  label?: string;
   /**
    * Class CSS optionnelles
    */
@@ -39,10 +39,10 @@ export const SqButton = ({
   ...props
 }: ButtonProps) => {
   const variants = () => {
-    if (variant === 'orange') return "ripple-bg-orange-800 hover:bg-orange-900 text-white font-bold py-[.875rem] text-lg px-6 rounded";
-    if (variant === "outline") return "ripple-bg-orange-800 bg-white text-orange-800 hover:bg-orange-900 hover:text-white border-orange-800 border-2 font-bold py-[.875rem] text-lg px-6 rounded";
-    if (variant === "menuPrincipal") return "hover:text-orange-900 text-lg transition ease-in duration-300";
-    if (variant === "diapo") return "rounded-full bg-slate-300 w-10 h-10";
+    if (variant === 'orange') return "inline-block ripple-bg-orange-800 hover:bg-orange-900 text-white font-bold py-[.875rem] text-lg px-6 rounded";
+    if (variant === "outline") return "inline-block ripple-bg-orange-800 bg-white text-orange-800 hover:bg-orange-900 hover:text-white border-orange-800 border-2 font-bold py-[.875rem] text-lg px-6 rounded";
+    if (variant === "menuPrincipal") return "inline-block hover:text-orange-900 text-lg transition ease-in duration-300";
+    if (variant === "diapo") return "inline-block rounded-full bg-slate-300 w-10 h-10";
   }
   const sizes = () => {
     if (size === 'small') return '';
@@ -50,20 +50,20 @@ export const SqButton = ({
     if (size === 'large') return '';
   }
   const classes = () => {
-    return className ? className : '';
+    return [className ? className : '',variants(),sizes()].join(' ');
   }
   return (
     <>
       { href ? (
-        <a
-          href={href}
-          className={[classes,variants(),sizes()].join(' ')}
-        >
-          {label}
+        <a 
+          href={href} 
+          className={classes()}
+          {...props}>
+            {label}
         </a>
       ) : (
         <button
-          className={[classes,variants(),sizes()].join(' ')}
+          className={classes()}
           {...props}
         >
           {label}
